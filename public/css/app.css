@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+body main {
+  width: 800px;
+  min-height: 500px;
+}
+body main form {
+  padding: 20px;
+  background-color: #c8c8ff;
+}
+body main form input[type=submit] {
+  padding: 5px;
+}
+body main div {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  background-color: #9b9bff;
+}
+body main div ul {
+  margin-left: 20px;
+}
+body main div table {
+  width: 100%;
+}
+body main div table, body main div table tr, body main div table th, body main div table td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+body main div table tr th:first-child {
+  text-align: left;
+}
+body main div table tr td:last-child {
+  text-align: center;
+}
