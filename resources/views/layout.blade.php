@@ -3,13 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Web Crawler</title>
+        <title>Web Crawler 01102022</title>
         <link href="{{ asset("css/app.css", \App::environment() == 'production') }}" rel="stylesheet">
         <script src="{{ asset("js/app.js", \App::environment() == 'production') }}"></script>
     </head>
     <body>
-        <header></header>
         <main>@yield("main")</main>
-        <footer></footer>
     </body>
 </html>
