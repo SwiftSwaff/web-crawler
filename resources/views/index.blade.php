@@ -1,15 +1,19 @@
 @extends("layout")
 
 @section("main")
-<form id="crawl_form" method="POST" action="/">
-    @csrf
-    <label for="url">https://www.agencyanalytics.com/</label>
-    <input type="text" id="url" name="url" placeholder="Enter URL"/>
-    <input type="submit" name="action" value="Use Custom"/>
-    <input type="submit" name="action" value="Use Random"/>
-</form>
+<div id="form_container">
+    <form id="crawl_form" method="POST" action="/">
+        @csrf
+        <label for="url">https://www.agencyanalytics.com/</label>
+        <input type="text" id="url" name="url" placeholder="Enter Subdirectory Here"/>
+        <div id="submit_container">
+            <input type="submit" name="action" value="Use Custom"/>
+            <input type="submit" name="action" value="Use Random"/>
+        </div>
+    </form>
+</div>
 @if (!is_null($summary))
-<div>
+<div id="summary_container">
     <ul>
         <li>Pages Crawled: {{ $summary->page_count }}</li>
         <li>Unique Images: {{ $summary->unique_image_count }}</li>

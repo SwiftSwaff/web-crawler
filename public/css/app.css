@@ -11,36 +11,66 @@ body {
   height: 100%;
 }
 body main {
-  width: 800px;
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 900px;
   min-height: 500px;
 }
-body main form {
-  padding: 20px;
+@media (min-width: 900px) {
+  body main {
+    width: 900px;
+  }
+}
+body main div#form_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   background-color: #c8c8ff;
 }
-body main form input[type=submit] {
+body main div#form_container form {
+  padding: 20px;
+  text-align: center;
+}
+body main div#form_container form #submit_container {
+  margin-top: 10px;
+}
+body main div#form_container form #submit_container input[type=submit] {
   padding: 5px;
 }
-body main div {
+body main div#summary_container {
   display: flex;
   flex-direction: column;
   padding: 20px;
   gap: 20px;
   background-color: #9b9bff;
+  font-size: 10px;
 }
-body main div ul {
+@media (min-width: 600px) {
+  body main div#summary_container {
+    font-size: 12px;
+  }
+}
+@media (min-width: 900px) {
+  body main div#summary_container {
+    font-size: 16px;
+  }
+}
+body main div#summary_container ul {
   margin-left: 20px;
 }
-body main div table {
+body main div#summary_container table {
   width: 100%;
 }
-body main div table, body main div table tr, body main div table th, body main div table td {
+body main div#summary_container table, body main div#summary_container table tr, body main div#summary_container table th, body main div#summary_container table td {
   border: 1px solid black;
   border-collapse: collapse;
 }
-body main div table tr th:first-child {
+body main div#summary_container table tr th, body main div#summary_container table tr td {
+  padding: 5px;
+}
+body main div#summary_container table tr th:first-child {
   text-align: left;
 }
-body main div table tr td:last-child {
+body main div#summary_container table tr td:last-child {
   text-align: center;
 }
