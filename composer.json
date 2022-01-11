@@ -4,6 +4,12 @@
     "description": "The Laravel Framework.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
+    "author": {
+        "name": "Jeff Geyer",
+        "email": "jeff.geyer.29@gmail.com",
+        "homepage": "https://www.swiftswaff.com",
+        "role": "Developer"
+    },
     "require": {
         "php": "^8.0",
         "fruitcake/laravel-cors": "^2.0",
