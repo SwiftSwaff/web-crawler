@@ -168,9 +168,9 @@ class SpiderHelper {
         }
         
         // remove duplicates
-        $links["internal"] = array_unique($links["internal"]);
-        $links["external"] = array_unique($links["external"]);
-        
+        $links["internal"] = array_values(array_unique($links["internal"]));
+        $links["external"] = array_values(array_unique($links["external"]));
+
         return $links;
     }
 
@@ -193,6 +193,6 @@ class SpiderHelper {
         }
 
         // return images with duplicates removed
-        return array_unique($images);
+        return array_values(array_unique($images));
     }
 }
